@@ -1,0 +1,37 @@
+<%= form_with(model: divison) do |form| %>
+  <% if divison.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(divison.errors.count, "error") %> prohibited this divison from being saved:</h2>
+
+      <ul>
+        <% divison.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :desc, style: "display: block" %>
+    <%= form.text_field :desc %>
+  </div>
+
+  <div>
+    <%= form.label :team, style: "display: block" %>
+    <%= form.text_field :team %>
+  </div>
+
+  <div>
+    <%= form.label :manager, style: "display: block" %>
+    <%= form.text_field :manager %>
+  </div>
+
+  <div style="margin-top:30px;">
+    <%= form.submit %>
+  </div>
+<% end %>

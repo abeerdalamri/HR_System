@@ -1,0 +1,2 @@
+class Divison < ApplicationRecord
+end

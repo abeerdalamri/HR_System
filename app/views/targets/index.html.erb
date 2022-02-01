@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Targets</h1>
+<%= link_to "New target", new_target_path %>
+
+<div id="targets">
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Finish Date</th>
+      <th scope="col">Attribute</th>
+      <th scope="col">Team</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @targets.each do |target| %>
+      <tr>
+        <td><%= target.name %></td>
+        <td><%= target.desc %></td>
+        <td><%= target.sDate %></td>
+        <td><%= target.fDate %></td>
+        <td><%= target.attr %></td>
+        <td><%= target.team %></td>
+        <td><%= target.status %></td>
+        <td><%= link_to "Show this target", target %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
