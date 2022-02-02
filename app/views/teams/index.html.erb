@@ -21,7 +21,9 @@
         <td><%= team.members %></td>
         <td><%= team.desc %></td>
         <td><%= team.teamLead %></td>
-        <td><%= link_to "Show this team", team %></td>
+        <td><button class="btn btn-light"><%= link_to "Show", team %></button>
+        |   <button class="btn btn-light"><%= link_to "Edit", edit_team_path(team) %></button>
+        |<%= button_to "Destroy", team, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

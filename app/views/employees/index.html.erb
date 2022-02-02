@@ -12,7 +12,7 @@
       <th scope="col">Job</th>
       <th scope="col">Salary</th>
       <th scope="col">Employment status</th>
-      <th scope="col">Action</th>
+      <th scope="col">Action  </th>
     </tr>
   </thead>
   <tbody>
@@ -23,7 +23,12 @@
         <td><%= employee.job %></td>
         <td><%= employee.salary %></td>
         <td><%= employee.emp_status %></td>
-        <td><%= link_to "Show this employee", employee %></td>
+        
+        <td>
+        <button class="btn btn-light"><%= link_to "Show", employee %></button>
+        |   <button class="btn btn-light"><%= link_to "Edit", edit_employee_path(employee) %></button>
+        |<%= button_to "Destroy", employee, method: :delete %>
+       </td>
       </tr>
     <% end %>
   </tbody>

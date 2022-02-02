@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Divisons</h1>
+<h1>Divisions</h1>
 
 <div id="divisons">
  
@@ -21,7 +21,9 @@
         <td><%= divison.team%></td>
         <td><%= divison.manager%></td>
         <td><%= divison.desc%></td>
-        <td><%= link_to "Show this divison", divison %></td>
+        <td><button class="btn btn-light"><%= link_to "Show", divison %></button>
+        |   <button class="btn btn-light"><%= link_to "Edit", edit_divison_path(divison) %></button>
+        |<%= button_to "Destroy", divison, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
