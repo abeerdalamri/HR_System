@@ -27,7 +27,9 @@
         <td><%= target.attr %></td>
         <td><%= target.team %></td>
         <td><%= target.status %></td>
-        <td><%= link_to "Show this target", target %></td>
+        <td><button class="btn btn-light"><%= link_to "Show", target %></button>
+        |   <button class="btn btn-light"><%= link_to "Edit", edit_target_path(target) %></button>
+        |<%= button_to "Destroy", target, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

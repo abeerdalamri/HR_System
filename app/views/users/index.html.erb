@@ -17,7 +17,9 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email%></td>
-        <td><%= link_to "Show this user", user %></td>
+        <td><button class="btn btn-light"><%= link_to "Show", user %></button>
+        |   <button class="btn btn-light"><%= link_to "Edit", edit_user_path(user) %></button>
+        |<%= button_to "Destroy", user, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

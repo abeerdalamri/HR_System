@@ -58,3 +58,6 @@ body .card{
     grid-auto-rows: auto;
     grid-gap: 1rem;
 }
+table{
+    width: 400px;
+}
